@@ -1,6 +1,43 @@
-# Semantic Segmentation
-### Introduction
-In this project, you'll label the pixels of a road in images using a Fully Convolutional Network (FCN).
+## Term 3 - Project 2 : Semantic Segmentation   
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
+In this project, my goal was to use the techniques and code examples presented in the Udacity course to label the pixels of a road in images using a Fully Convolutional Network (FCN).
+
+[//]: # (Image References)
+
+[image1]: ./final_output/um_000002.png "Test Image - 1"
+[image2]: ./final_output/um_000006.png "Test Image - 2"
+[image3]: ./final_output/um_000013.png "Test Image - 3"
+[image4]: ./final_output/um_000023.png "Test Image - 4"
+
+The goals / steps of this project are the following:
+- Load a pre-trained VGG-16 network
+- Define the layers function, as per the FCN-8 architecture presented by J. Long et al.[1] 
+- Optimize network using an AdamOptimizer and a cross-entropy loss function.
+- Train Network using reasonable hyperparameters. 
+- Classify pixels in a dash cam image as either road or non-road.
+
+[1] - J. Long et al., Fully Convolutional Networks for Semantic Segmentation, UC Berkley, https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf
+
+### Results 
+
+Using the final Hyperparameters:
+- Epochs: 20
+- Batch Size : 24
+- Keep Probability: 0.5
+- Learning rate : 1e-4
+- L2 regularizer: 1e-5 
+
+The following results were generated, which were found to have been correctly classified with only small errors in some images.
+
+![alt text][image1]
+
+![alt text][image2]
+
+![alt text][image3]
+
+![alt text][image4]
+
 
 ### Setup
 ##### Frameworks and Packages
@@ -11,7 +48,6 @@ Make sure you have the following is installed:
  - [SciPy](https://www.scipy.org/)
 ##### Dataset
 Download the [Kitti Road dataset](http://www.cvlibs.net/datasets/kitti/eval_road.php) from [here](http://www.cvlibs.net/download.php?file=data_road.zip).  Extract the dataset in the `data` folder.  This will create the folder `data_road` with all the training a test images.
-
 ### Start
 ##### Implement
 Implement the code in the `main.py` module indicated by the "TODO" comments.
